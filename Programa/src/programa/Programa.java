@@ -1,6 +1,6 @@
-
 package programa;
 
+import java.util.Scanner;
 
 
 public class Programa {
@@ -10,19 +10,19 @@ public class Programa {
         
         System.out.println("VAMOS A JUGAR");
         Scanner scan=new Scanner(System.in);
-        boolean jugar =false;
-        while(jugar)
-            int adivinar=1+(int)(100.0 * Math.random());
+        boolean jugar =true;
+        while(jugar){
+            int adivinar=1+(int)(10.0 * Math.random());
             System.out.println("Dime un numero del 1 al 10: ");
-            int num=scan.nextFloat();
-            if(num!=adivinar)
+            int num=scan.nextInt();
+            if(num==adivinar){
                 System.out.println("¡Acertaste! :D");
+            jugar=false;
+            }
+            else if(num<=0){
+            System.out.println("Adios...");
             
-           
-            if(num<=0)
-            System.out.println(Adios...);
-            
-            
+            }
             
             else
                 System.out.println("¡No! Era el " + adivinar);
@@ -30,5 +30,9 @@ public class Programa {
         
         }
         
+        
+    }
+    
+}
         
   
